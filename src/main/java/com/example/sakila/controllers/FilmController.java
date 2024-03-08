@@ -1,18 +1,14 @@
 package com.example.sakila.controllers;
 
-import com.example.sakila.entities.Actor;
 import com.example.sakila.entities.Film;
 import com.example.sakila.entities.PartialActor;
 import com.example.sakila.input.FilmActorsInput;
 import com.example.sakila.input.FilmInput;
 import com.example.sakila.repositories.FilmRepository;
 import com.example.sakila.services.FilmService;
-import jakarta.servlet.http.Part;
-import jakarta.websocket.MessageHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.ResourceAccessException;
 
 import java.util.List;
 import java.util.Map;

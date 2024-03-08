@@ -87,7 +87,7 @@ public class ActorService {
         List<Short> filmsId = data.getFilms();
         for (Short id: filmsId){
             Film film = filmRepository.findById(id)
-                    .orElseThrow(() -> new ResourceAccessException("No such actor."));
+                    .orElseThrow(() -> new ResourceAccessException("No such film."));
             PartialFilm partialFilm = new PartialFilm();
             partialFilm.setId(film.getId());
             partialFilm.setTitle(film.getTitle());

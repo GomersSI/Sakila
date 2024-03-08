@@ -1,6 +1,5 @@
 package com.example.sakila.services;
 
-import com.example.sakila.entities.Actor;
 import com.example.sakila.entities.Category;
 import com.example.sakila.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,6 @@
 package com.example.sakila.controllers;
 
-import com.example.sakila.entities.Film;
 import com.example.sakila.entities.Language;
-import com.example.sakila.repositories.FilmRepository;
 import com.example.sakila.repositories.LanguageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

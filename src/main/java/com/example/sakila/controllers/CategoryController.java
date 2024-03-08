@@ -1,12 +1,9 @@
 package com.example.sakila.controllers;
 
 import com.example.sakila.entities.Category;
-import com.example.sakila.entities.Film;
 import com.example.sakila.repositories.CategoryRepository;
 import com.example.sakila.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;

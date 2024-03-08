@@ -1,24 +1,17 @@
 package com.example.sakila.controllers;
 
 import com.example.sakila.entities.Actor;
-import com.example.sakila.entities.Film;
 import com.example.sakila.entities.PartialFilm;
 import com.example.sakila.input.ActorFilmsInput;
 import com.example.sakila.input.ActorInput;
-import com.example.sakila.repositories.ActorRepository;
 import com.example.sakila.services.ActorService;
-import jakarta.persistence.Column;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.ResourceAccessException;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
