@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Category.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sakila</a> &gt; <a href="index.source.html" class="el_package">com.example.sakila.entities</a> &gt; <span class="el_source">Category.java</span></div><h1>Category.java</h1><pre class="source lang-java linenums">package com.example.sakila.entities;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = &quot;category&quot;)
+@Getter
+<span class="nc" id="L12">public class Category {</span>
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = &quot;category_id&quot;)
+<span class="nc" id="L16">    private Byte id;</span>
+
+    @Column(name = &quot;name&quot;)
+<span class="nc" id="L19">    private String name;</span>
+
+<span class="nc" id="L21">    @ManyToMany</span>
+    @JoinTable(
+            name = &quot;film_category&quot;,
+            joinColumns = {@JoinColumn(name = &quot;category_id&quot;)},
+            inverseJoinColumns = {@JoinColumn(name = &quot;film_id&quot;)}
+    )
+<span class="nc" id="L27">    private List&lt;PartialFilm&gt; films = new ArrayList&lt;&gt;();</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
