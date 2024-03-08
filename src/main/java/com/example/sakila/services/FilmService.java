@@ -25,10 +25,8 @@ public class FilmService {
     ActorRepository actorRepository;
     @Autowired
     FilmRepository filmRepository;
-
     @Autowired
     LanguageRepository languageRepository;
-
     @Autowired
     CategoryRepository categoryRepository;
 

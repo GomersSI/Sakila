@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RunCucumberTest" time="0.85" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RunCucumberTest" time="0.886" tests="2" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
@@ -60,5 +60,25 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="Actor fetched by id" classname="EMPTY_NAME" time="0.736"/>
+  <testcase name="Actor fetched by id" classname="EMPTY_NAME" time="0.743"/>
+  <testcase name="List of actors fetched" classname="EMPTY_NAME" time="0.022">
+    <failure message="expected: &lt;null&gt; but was: &lt;com.example.sakila.entities.Actor@11381415&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <null> but was: <com.example.sakila.entities.Actor@11381415>
+]]></failure>
+    <system-out><![CDATA[
+Scenario: List of actors fetched          &amp#27;[90m# ActorController.feature:7&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mmultiple actors exist&amp#27;[0m             &amp#27;[90m# ActorControllerStepDefs.givenMultipleActorsExist()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mget request is made for all actors&amp#27;[0m &amp#27;[90m# ActorControllerStepDefs.whenActorsRequested()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mthe list of actors is returned&amp#27;[0m     &amp#27;[90m# ActorControllerStepDefs.actorsAreReturned()&amp#27;[0m
+      &amp#27;[31morg.opentest4j.AssertionFailedError: expected: <null> but was: <com.example.sakila.entities.Actor@11381415>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ActorControllerStepDefs.actorsAreReturned(ActorControllerStepDefs.java:72)
+	at ✽.the list of actors is returned(classpath:ActorController.feature:10)
+&amp#27;[0m
+]]></system-out>
+  </testcase>
 </testsuite>
